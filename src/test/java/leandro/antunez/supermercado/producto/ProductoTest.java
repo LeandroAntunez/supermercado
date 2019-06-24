@@ -27,4 +27,9 @@ public class ProductoTest {
         Assert.assertEquals(this.producto.getPrecio(), precioProducto);
     }
 
+    @Test
+    public void test_1_C_seCreaUnProductoYSeImprimeEnPantalla(){
+        Assert.assertEquals("Nombre: Plato /// Precio: $40", this.producto.toString());
+    }
+
 }

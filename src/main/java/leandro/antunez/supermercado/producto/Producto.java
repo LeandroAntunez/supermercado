@@ -25,4 +25,9 @@ public class Producto {
     private void setPrecio(int precio) {
         this.precio = precio;
     }
+
+    public String toString(){
+        return "Nombre: " + this.getNombre() +
+                " /// Precio: $" + this.getPrecio();
+    }
 }
