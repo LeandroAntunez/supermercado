@@ -25,5 +25,8 @@ public class CosmeticoTest {
         Assert.assertEquals(contenidoCosmetico, this.cosmetico.getContenido());
     }
 
-
+    @Test
+    public void test_4_B_seCreaUnCosmeticoYSeImprimeEnPantalla(){
+        Assert.assertEquals("Nombre: Shampoo Sedal /// Contenido: 500ml /// Precio: $19", this.cosmetico.toString());
+    }
 }
