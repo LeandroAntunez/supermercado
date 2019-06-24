@@ -1,4 +1,7 @@
 # Ejercicio Escuelita Somos PNT
+[![Build Status](https://travis-ci.com/LeandroAntunez/supermercado.svg?branch=master)](https://travis-ci.com/LeandroAntunez/supermercado)
+[![Code Coverage](https://codecov.io/gh/LeandroAntunez/supermercado/coverage.svg)](https://codecov.io/gh/LeandroAntunez/supermercado)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0fd7603303fb4a31bbf043864de44d70)](https://www.codacy.com/app/LeandroAntunez/supermercado?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LeandroAntunez/supermercado&amp;utm_campaign=Badge_Grade)
 
 Imaginemos un supermercado de barrio.
 
