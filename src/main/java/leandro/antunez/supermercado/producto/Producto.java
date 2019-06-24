@@ -3,8 +3,10 @@ package leandro.antunez.supermercado.producto;
 public class Producto {
 
     private String nombre;
+    private int precio;
 
-    public Producto(String nombreProducto) {
+    public Producto(String nombreProducto, int precioProducto) {
+        this.setPrecio(precioProducto);
         this.setNombre(nombreProducto);
     }
 
@@ -14,5 +16,13 @@ public class Producto {
 
     private void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    private void setPrecio(int precio) {
+        this.precio = precio;
     }
 }
