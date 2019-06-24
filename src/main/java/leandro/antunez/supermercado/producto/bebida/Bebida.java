@@ -15,7 +15,13 @@ public class Bebida extends Producto {
         return litros;
     }
 
-    public void setLitros(double litros) {
+    private void setLitros(double litros) {
         this.litros = litros;
+    }
+
+    public String toString(){
+        return "Nombre: " + this.getNombre() +
+                " /// Litros: " + this.getLitros() +
+                " /// Precio: $" + this.getPrecio();
     }
 }

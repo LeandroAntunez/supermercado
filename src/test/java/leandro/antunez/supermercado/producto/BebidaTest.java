@@ -15,13 +15,18 @@ public class BebidaTest {
     @Before
     public void setUp(){
         this.litrosBebida = 1.5;
-        this.nombreBebida = "Coca Cola";
-        this.precioBebida = 20;
+        this.nombreBebida = "Coca-Cola";
+        this.precioBebida = 18;
         this.bebida = new Bebida(nombreBebida, precioBebida, litrosBebida);
     }
 
     @Test
     public void test_2_A_seCreaBebidaConVolumen(){
         Assert.assertEquals(this.bebida.getLitros(), litrosBebida, 0.1);
+    }
+
+    @Test
+    public void test_2_B_seCreaBebidaYSeImprimePorPantalla(){
+        Assert.assertEquals("Nombre: Coca-Cola /// Litros: 1.5 /// Precio: $18", bebida.toString());
     }
 }
