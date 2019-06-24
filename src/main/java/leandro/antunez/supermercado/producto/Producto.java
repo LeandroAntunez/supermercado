@@ -10,7 +10,7 @@ public class Producto {
         this.setNombre(nombreProducto);
     }
 
-    public String getNombre() {
+    protected String getNombre() {
         return nombre;
     }
 
@@ -18,7 +18,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
+    protected int getPrecio() {
         return precio;
     }
 
