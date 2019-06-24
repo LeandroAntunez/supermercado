@@ -24,4 +24,8 @@ public class Carrito {
     public void agregarProducto(Producto producto) {
         this.getProductos().add(producto);
     }
+
+    public void agregarTodos(ArrayList<Producto> listaDeProductos) {
+        this.getProductos().addAll(listaDeProductos);
+    }
 }
