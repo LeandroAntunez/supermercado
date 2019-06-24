@@ -4,6 +4,7 @@ import leandro.antunez.supermercado.producto.Producto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Carrito {
 
@@ -27,5 +28,9 @@ public class Carrito {
 
     public void agregarTodos(ArrayList<Producto> listaDeProductos) {
         this.getProductos().addAll(listaDeProductos);
+    }
+
+    public String imprimirProductos() {
+        return this.getProductos().stream().map(Producto::toString).collect(Collectors.joining("\n\n"));
     }
 }

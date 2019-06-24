@@ -32,15 +32,24 @@ public class CarritoTest {
 
     @Test
     public void test_5_A_seCreaUnCarritoYSeAgregaUnProducto(){
-        carrito.agregarProducto(bebida);
+        this.carrito.agregarProducto(bebida);
         Assert.assertTrue(this.carrito.getProductos().contains(bebida));
     }
 
     @Test
     public void test_5_B_seCreaUnCarritoYSeAgreganVariosProductos(){
-        carrito.agregarTodos(listaDeProductos);
+        this.carrito.agregarTodos(listaDeProductos);
         Assert.assertTrue(this.carrito.getProductos().contains(bebida));
         Assert.assertTrue(this.carrito.getProductos().contains(alimento));
         Assert.assertTrue(this.carrito.getProductos().contains(cosmetico));
+    }
+
+    @Test
+    public void test_C_seImprimeEnPantallaLosProductosAgregadosAlCarrito(){
+        this.carrito.agregarTodos(listaDeProductos);
+        Assert.assertEquals("Nombre: Agua Villavicencio /// Litros: 1.5 /// Precio: $45\n\n" +
+                "Nombre: Galletitas Pepas /// Precio: $40 /// Unidad de venta: kilo\n\n" +
+                "Nombre: Jabon Liquido Dove /// Contenido: 40ml /// Precio: $20",
+                this.carrito.imprimirProductos());
     }
 }
