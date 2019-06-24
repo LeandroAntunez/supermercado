@@ -21,7 +21,7 @@ public class BebidaTest {
     }
 
     @Test
-    public void seCreaBebidaConVolumen(){
-        Assert.assertEquals(bebida.getLitros(), litrosBebida, 0.1);
+    public void test_2_A_seCreaBebidaConVolumen(){
+        Assert.assertEquals(this.bebida.getLitros(), litrosBebida, 0.1);
     }
 }
