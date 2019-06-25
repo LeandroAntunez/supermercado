@@ -1,6 +1,5 @@
 package leandro.antunez.supermercado.carrito;
 
-import com.sun.org.apache.xalan.internal.extensions.ExpressionContext;
 import leandro.antunez.supermercado.producto.Producto;
 
 import java.util.ArrayList;
@@ -51,11 +50,18 @@ public class Carrito {
                 .orElseThrow(NoSuchElementException::new);
     }
 
-    public String imprimirProductoMasCaro() {
-        return this.productoMasCaro().toString();
+    public String imprimirNombreDeProductoMasCaro() {
+        return "Producto más caro: " + this.productoMasCaro().getNombre();
     }
 
-    public String imprimirProductoMasBarato() {
-        return this.productoMasBarato().toString();
+    public String imprimirNombreDeProductoMasBarato() {
+        return "Producto más barato: " + this.productoMasBarato().getNombre();
+    }
+
+    public String toString(){
+        return this.imprimirTodosLosProductos() +
+                "\n\n=============================\n\n" +
+                this.imprimirNombreDeProductoMasCaro() + "\n\n" +
+                this.imprimirNombreDeProductoMasBarato();
     }
 }

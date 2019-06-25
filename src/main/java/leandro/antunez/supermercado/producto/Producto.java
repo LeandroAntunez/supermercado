@@ -10,7 +10,7 @@ public class Producto {
         this.setNombre(nombreProducto);
     }
 
-    protected String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 

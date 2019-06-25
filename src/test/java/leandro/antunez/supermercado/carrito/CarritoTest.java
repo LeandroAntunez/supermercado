@@ -66,11 +66,28 @@ public class CarritoTest {
 
     @Test
     public void test_5_F_seImprimeElProductoMasCaroDelCarrito(){
-        Assert.assertEquals(bebida.toString(), this.carritoConVariosProductos.imprimirProductoMasCaro());
+        Assert.assertEquals("Producto más caro: " + bebida.getNombre(), this.carritoConVariosProductos.imprimirNombreDeProductoMasCaro());
     }
 
     @Test
     public void test_5_G_seImprimeElProductoMasBaratoDelCarrito(){
-        Assert.assertEquals(cosmetico.toString(), this.carritoConVariosProductos.imprimirProductoMasBarato());
+        Assert.assertEquals("Producto más barato: " + cosmetico.getNombre(), this.carritoConVariosProductos.imprimirNombreDeProductoMasBarato());
+    }
+
+    @Test
+    public void test_5_H_seImprimeTodosLosProductosLuegoElMasCaroYElMasBaratoDelCarrito(){
+        Assert.assertEquals("Nombre: Agua Villavicencio /// Litros: 1.5 /// Precio: $45\n\n" +
+
+                "Nombre: Galletitas Pepas /// Precio: $40 /// Unidad de venta: kilo\n\n" +
+
+                "Nombre: Jabon Liquido Dove /// Contenido: 40ml /// Precio: $20\n\n" +
+
+                "=============================\n\n" +
+
+                "Producto más caro: Agua Villavicencio\n\n" +
+
+                "Producto más barato: Jabon Liquido Dove",
+
+                this.carritoConVariosProductos.toString());
     }
 }
