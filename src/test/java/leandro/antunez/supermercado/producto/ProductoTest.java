@@ -18,17 +18,17 @@ public class ProductoTest {
     }
 
     @Test
-    public void test_1_A_seCreaUnProductoConNombre(){
+    public void test1ASeCreaUnProductoConNombre(){
         Assert.assertEquals(this.producto.getNombre(), nombreProducto);
     }
 
     @Test
-    public void test_1_B_seCreaUnProductoConNombreYPrecio(){
+    public void test1BSeCreaUnProductoConNombreYPrecio(){
         Assert.assertEquals(this.producto.getPrecio(), precioProducto);
     }
 
     @Test
-    public void test_1_C_seCreaUnProductoYSeImprimeEnPantalla(){
+    public void test1CSeCreaUnProductoYSeImprimeEnPantalla(){
         Assert.assertEquals("Nombre: Plato /// Precio: $40", this.producto.toString());
     }
 

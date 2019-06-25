@@ -9,24 +9,22 @@ public class CosmeticoTest {
 
     private int contenidoCosmetico;
     private Cosmetico cosmetico;
-    private String nombreCosmetico;
-    private int precioCosmetico;
 
     @Before
     public void setUp(){
         this.contenidoCosmetico = 500;
-        this.nombreCosmetico = "Shampoo Sedal";
-        this.precioCosmetico = 19;
+        String nombreCosmetico = "Shampoo Sedal";
+        int precioCosmetico = 19;
         this.cosmetico = new Cosmetico(nombreCosmetico, precioCosmetico, contenidoCosmetico);
     }
 
     @Test
-    public void test_4_A_seCreaUnCosmeticoYTieneContenidoDe500Mililitros(){
+    public void test4ASeCreaUnCosmeticoYTieneContenidoDe500Mililitros(){
         Assert.assertEquals(contenidoCosmetico, this.cosmetico.getContenido());
     }
 
     @Test
-    public void test_4_B_seCreaUnCosmeticoYSeImprimeEnPantalla(){
+    public void test4BSeCreaUnCosmeticoYSeImprimeEnPantalla(){
         Assert.assertEquals("Nombre: Shampoo Sedal /// Contenido: 500ml /// Precio: $19", this.cosmetico.toString());
     }
 }

@@ -15,7 +15,6 @@ public class CarritoTest {
     private Carrito carritoConUnProducto;
     private Carrito carritoConVariosProductos;
     private Bebida bebida;
-    private ArrayList<Producto> listaDeProductos;
     private Alimento alimento;
     private Cosmetico cosmetico;
 
@@ -26,28 +25,28 @@ public class CarritoTest {
         this.bebida = new Bebida("Agua Villavicencio", 45, 1.5);
         this.carritoConUnProducto = new Carrito();
         this.carritoConVariosProductos = new Carrito();
-        this.listaDeProductos = new ArrayList<>();
-        this.listaDeProductos.add(bebida);
-        this.listaDeProductos.add(alimento);
-        this.listaDeProductos.add(cosmetico);
+        ArrayList<Producto> listaDeProductos = new ArrayList<>();
+        listaDeProductos.add(bebida);
+        listaDeProductos.add(alimento);
+        listaDeProductos.add(cosmetico);
         this.carritoConUnProducto.agregarProducto(bebida);
         this.carritoConVariosProductos.agregarTodos(listaDeProductos);
     }
 
     @Test
-    public void test_5_A_seCreaUnCarritoYSeAgregaUnProducto(){
+    public void test5ASeCreaUnCarritoYSeAgregaUnProducto(){
         Assert.assertTrue(this.carritoConUnProducto.getProductos().contains(bebida));
     }
 
     @Test
-    public void test_5_B_seCreaUnCarritoYSeAgreganVariosProductos(){
+    public void test5BSeCreaUnCarritoYSeAgreganVariosProductos(){
         Assert.assertTrue(this.carritoConVariosProductos.getProductos().contains(bebida));
         Assert.assertTrue(this.carritoConVariosProductos.getProductos().contains(alimento));
         Assert.assertTrue(this.carritoConVariosProductos.getProductos().contains(cosmetico));
     }
 
     @Test
-    public void test_5_C_seImprimeEnPantallaLosProductosAgregadosAlCarrito(){
+    public void test5CSeImprimeEnPantallaLosProductosAgregadosAlCarrito(){
         Assert.assertEquals("Nombre: Agua Villavicencio /// Litros: 1.5 /// Precio: $45\n\n" +
                 "Nombre: Galletitas Pepas /// Precio: $40 /// Unidad de venta: kilo\n\n" +
                 "Nombre: Jabon Liquido Dove /// Contenido: 40ml /// Precio: $20",
@@ -55,27 +54,27 @@ public class CarritoTest {
     }
 
     @Test
-    public void test_5_D_seBuscaElProductoMasCaroDelCarrito(){
+    public void test5DSeBuscaElProductoMasCaroDelCarrito(){
         Assert.assertEquals(bebida, this.carritoConVariosProductos.productoMasCaro());
     }
 
     @Test
-    public void test_5_E_seBuscaElProductoMasBaratoDelCarrito(){
+    public void test5ESeBuscaElProductoMasBaratoDelCarrito(){
         Assert.assertEquals(cosmetico, this.carritoConVariosProductos.productoMasBarato());
     }
 
     @Test
-    public void test_5_F_seImprimeElProductoMasCaroDelCarrito(){
+    public void test5FSeImprimeElProductoMasCaroDelCarrito(){
         Assert.assertEquals("Producto más caro: " + bebida.getNombre(), this.carritoConVariosProductos.imprimirNombreDeProductoMasCaro());
     }
 
     @Test
-    public void test_5_G_seImprimeElProductoMasBaratoDelCarrito(){
+    public void test5GSeImprimeElProductoMasBaratoDelCarrito(){
         Assert.assertEquals("Producto más barato: " + cosmetico.getNombre(), this.carritoConVariosProductos.imprimirNombreDeProductoMasBarato());
     }
 
     @Test
-    public void test_5_H_seImprimeTodosLosProductosLuegoElMasCaroYElMasBaratoDelCarrito(){
+    public void test5HSeImprimeTodosLosProductosLuegoElMasCaroYElMasBaratoDelCarrito(){
         Assert.assertEquals("Nombre: Agua Villavicencio /// Litros: 1.5 /// Precio: $45\n\n" +
 
                 "Nombre: Galletitas Pepas /// Precio: $40 /// Unidad de venta: kilo\n\n" +
