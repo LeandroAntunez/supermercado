@@ -52,4 +52,10 @@ public class CarritoTest {
                 "Nombre: Jabon Liquido Dove /// Contenido: 40ml /// Precio: $20",
                 this.carrito.imprimirProductos());
     }
+
+    @Test
+    public void test_5_D_seImprimeElProductoMasCaroDelCarrito(){
+        this.carrito.agregarTodos(listaDeProductos);
+        Assert.assertEquals(bebida.toString(), this.carrito.productoMasCaro().toString());
+    }
 }

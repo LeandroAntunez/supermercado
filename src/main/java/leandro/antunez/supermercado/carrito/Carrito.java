@@ -3,7 +3,9 @@ package leandro.antunez.supermercado.carrito;
 import leandro.antunez.supermercado.producto.Producto;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 public class Carrito {
@@ -33,4 +35,12 @@ public class Carrito {
     public String imprimirProductos() {
         return this.getProductos().stream().map(Producto::toString).collect(Collectors.joining("\n\n"));
     }
+
+    public Producto productoMasCaro() {
+        return this.getProductos()
+                .stream()
+                .max(Comparator.comparing(Producto::getPrecio))
+                .orElseThrow(NoSuchElementException::new);
+    }
+
 }

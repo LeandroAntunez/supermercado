@@ -18,7 +18,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    protected int getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
